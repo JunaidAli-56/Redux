@@ -1,5 +1,5 @@
 const initalState = 0;
-const reducer = (state = initalState, action) => {
+const changeTheNumber = (state = initalState, action) => {
     switch (action.type) {
         case 'INCREMENT': return state + 1;
         case 'DECREMENT': return state - 1;
@@ -7,4 +7,4 @@ const reducer = (state = initalState, action) => {
     }
 }
 
-export default reducer;
+export default changeTheNumber;

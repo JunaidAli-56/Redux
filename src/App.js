@@ -1,19 +1,18 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { incNumber, decNumber } from './actions/index'
 import './App.css';
-import store from './store';
 
 function App() {
-
-  store.subscribe(() => console.log(store.getState()))
-
-
+  const myState = useSelector((state) => state.changeTheNumber)
+  const dispatch = useDispatch()
   return (
     <div>
       <h1>Hello Jarviz</h1>
       <h4>React Redux</h4>
       <div>
-        <button>-</button>
-        <input name='quantity' type="text" />
-        <button>+</button>
+        <button onClick={() => dispatch(decNumber())}>-</button>
+        <input name='quantity' type="text" value={myState} />
+        <button onClick={() => dispatch(incNumber())}>+</button>
       </div>
     </div>
   );
