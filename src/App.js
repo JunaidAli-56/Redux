@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { incNumber, decNumber } from './actions/index'
-import './App.css';
 
 function App() {
   const myState = useSelector((state) => state.changeTheNumber)
