@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <h1>Hello Jarviz</h1>
-      <h4>React Redux & Redux tookit</h4>
+      <h4>React Redux</h4>
       <div>
         <button onClick={() => dispatch(decNumber())}>-</button>
         <input name='quantity' type="text" value={myState} />
